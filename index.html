@@ -17,17 +17,18 @@
     <div class="base-info">
         <div class="base-info-left">
             <div class="base-info-item">姓名：王凯</div>
-            <div class="base-info-item">年龄：24</div>
+            <div class="base-info-item">年龄：23</div>
             <div class="base-info-item">电话：15652912603</div>
             <div class="base-info-item">学校：华北电力大学（北京）</div>
-            <div class="base-info-item">个人博客：<a href="http://www.badwaka.cn/blogWaka">http://www.badwaka.cn/blogWaka</a>
+            <div class="base-info-item">个人博客：<a target="_blank" href="http://www.jianshu.com/u/d184d3ab9060">http://www.jianshu.com/u/d184d3ab9060</a>
             </div>
         </div>
         <div class="base-info-right">
             <div class="base-info-item">性别：男</div>
             <div class="base-info-item">邮箱：waka931124@163.com</div>
             <div class="base-info-item">专业：软件工程</div>
-            <div class="base-info-item">GitHub：<a href="https://github.com/badwaka">https://github.com/badwaka</a></div>
+            <div class="base-info-item">GitHub：<a href="https://github.com/badwaka" target="_blank">https://github.com/badwaka</a>
+            </div>
         </div>
     </div>
 
@@ -57,7 +58,7 @@
         <div v-for="project in experience.projects">
             <div class="skill-item">
                 <div class="point"></div>
-                {{project.name}} <a :href="project.link">{{project.link}}</a>
+                {{project.name}}&nbsp;&nbsp;<a :href="project.link" target="_blank">{{project.link}}</a>
             </div>
             <ul v-for="intro in project.intros">
                 <li class="intro-item">
@@ -72,7 +73,7 @@
     <section v-for="project in personalProjects">
         <div class="skill-item">
             <div class="point"></div>
-            {{project.name}} &nbsp;&nbsp;<a :href="project.link">{{project.link}}</a>
+            {{project.name}} &nbsp;&nbsp;<a :href="project.link" target="_blank">{{project.link}}</a>
         </div>
         <ul v-for="intro in project.intros">
             <li class="intro-item">
@@ -89,25 +90,23 @@
         el: '.main',
         data: {
             skills: [
-                '掌握HTML、CSS、JS，熟练使用ES6',
-                'CSS预处理器方面熟练使用Sass，了解stylus，使用过PostCSS',
-                '类库方面熟悉jQuery、Vue.js、微信小程序MINA、AppCan.js(类Ionic的Hybrid框架)',
-                '熟练使用Bootstrap、Backbone.js、React，了解React Native、Redux',
-                '构建工具方面熟练使用webpack，了解Gulp.js；熟悉前端工程化和组件化开发思想',
-                '有后端开发经历，熟练使用Node.js、MongoDB；',
-                '类库方面熟练使用Express，了解koa/koa2；',
-                '工具方面熟练使用npm，使用过Yarn',
-                '有Android原生开发经历，熟练使用Java、Android SDK及Android调试工具',
-                '日常开发使用macOS，Webstorm，Android Studio，Git，SVN，熟悉linux命令',
+                '掌握HTML、CSS、JS，熟悉ES6，了解TypeScript',
+                '熟悉Sass、Less，了解Stylus、PostCSS',
+                '掌握jQuery、React、Redux，熟悉微信小程序、Vue、AppCan.js(类Ionic的Hybrid框架)，了解React Native',
+                '熟练使用Webpack、Gulp；熟悉前端工程化和组件化开发思想',
+                '有后端开发经历，熟练使用Node、Express、Koa，了解MySQL，MongoDB',
+                '熟练使用npm，了解Yarn',
+                '有Android原生开发经历，熟悉Java、Android SDK及Android调试工具',
+                '日常开发使用macOS，WebStorm/VSCode，熟悉Git，熟练使用Linux命令',
                 '英语4级，阅读英文文档基本无障碍'
             ],
             selfAssessments: [
-                '有自己的技术博客，70余篇原创博客，乐于分享，热爱新技术',
+                '有自己的技术博客，80余篇原创博客，乐于分享，热爱新技术',
                 '关注开源技术，技术视野开阔，学习能力强，能快速上手新技术，同时也能快速熟悉业务',
                 '211大学软件工程专业毕业，计算机基础扎实',
                 '理解前端工程化思想，对构建和持续集成有一定认识',
-                '理解组件化开发思想，有一定的设计和抽象能力',
-                '对后端技术和数据库有一定了解，熟悉Node.js，熟悉MongoDB',
+                '理解组件化开发思想，有一定的设计和抽象能力，独立编写可复用的React组件及Node中间件',
+                '对后端技术和数据库有一定了解',
                 '熟悉Android原生技术，在移动端适配及原生能力开发调试有优势'
             ],
             experiences: [
@@ -122,19 +121,19 @@
                         '2. 运用HTML、CSS将设计图转化为静态页面，运用JS及相关库实现交互效果开发；',
                         '3. 根据用户要求与项目需求解决所需浏览器兼容性问题以及BUG；',
                         '4. 利用AJAX与后端配合，进行数据逻辑的走通，完成数据交互、动态信息展现；',
-                        '5. 负责公司部分Android原生端插件的开发和维护；',
-                        '6. 负责公司项目的前端及Android原生端技术支持；',
-                        '7. 在公司内部进行前端技术分享；',
+                        '5. 在公司内部进行前端技术分享；',
                     ],
                     projects: [{
                         name: '云莱坞作家后台',
                         link: 'http://user.yunlaiwu.com/',
                         intros: [
-                            '该项目是云莱坞面向作家的后台应用，主要功能有编辑个人信息、简历、作品，查看投稿、订单、关注的人和作品等；',
-                            '负责整个作家后台的功能开发及维护；',
+                            '该项目是云莱坞作家后台，主要功能有编辑个人信息、简历、作品，查看投稿、订单、关注等；',
+                            '负责整个作家后台的功能开发及维护，负责SPA基础工程的搭建与优化；',
                             '前端页面使用 AntD+React+Redux+Immutable+ES6 进行开发；使用 webpack 进行构建打包；后端使用 Express+pm2 进行部署；',
-                            '该项目门户模块源代码已被中国电建、上海卡斯柯、万科集团、福田汽车、奥凯航空等企业级用户所采用；',
-                            '我在完善功能样式后使用Vue.js重构部分项目；使用Sass和flex布局重写UI，代码量减少20%'
+                            '在Node层使用ejs渲染页面，进行接口转发解决上传文件跨域的问题',
+                            '我在完善功能样式后重构整个项目：使用AntD替代react-bootstrap重写样式，编写特殊组件完成需求并抽象出公共UI库；',
+                            '升级webpack及去除无用依赖库，重新配置基础构建工程，使编译打包后的文件大小缩减至30%；抽象出第三方依赖库作为vendor增强缓存策略',
+                            '重写部分逻辑，聚合组件功能，并使用webpack分割打包代码，动态加载各个chunk包，以进行首页速度优化'
                         ]
                     }, {
                         name: '云莱坞官方网站',
@@ -142,7 +141,11 @@
                         intros: [
                             '该项目是云莱坞官方网站，主要面向作家和制片人群体；',
                             '主要负责 PC 端登录注册、闪电征稿、个人主页等模块，H5 端版权交易周、投票运营页等前端页面，及 node 中间层的开发与维护；',
-                            '前端页面使用 jQuery/Zepto+Less 进行开发；使用 Node+Express 作为中间层渲染页面和代理 php 端请求；使用 Gulp 构建打包；基于 LeanCloud 进行部署；',
+                            '前端页面使用 jQuery/Zepto+Less 进行开发；使用 Node+Express+ejs 作为中间层渲染页面和代理 php 端请求；使用 Gulp 构建打包；基于 LeanCloud 进行部署；',
+                            '在详情页及列表页通过Node层SSR渲染首屏数据增强SEO；使用百度统计、美洽等第三方工具统计流量和实现客服功能；',
+                            '使用reset.css统一样式；使用store.js统一本地储存；使用CDN加速图片及CSS、JS文件的加载；',
+                            '重构整个Node层代码，通过UA判断请求，手动代理移动端流量至另一机器集群进行流量压力分流；',
+                            '独立使用LeanCloudAPI、微信API，不依赖后端，开发完整的投票功能（PC结果页、微信端投票页）'
                         ]
                     }]
                 },
@@ -163,7 +166,7 @@
                         '8. 负责维护公司论坛AppCan社区，并进行一些技术方面的答疑。'
                     ],
                     projects: [{
-                        name: '正益工作（已上线）',
+                        name: '正益工作 Hybrid App（已上线）',
                         link: 'http://work.zyhao.com/',
                         intros: [
                             '该项目是企业移动门户管理及移动办公的一体式企业级解决方案；',
@@ -264,31 +267,27 @@
             personalProjects: [
                 {
                     name: '个人博客',
-                    link: 'https://github.com/BadWaka/blog-waka-by-vue',
+                    link: 'https://github.com/badwaka/blog-waka-by-vue',
                     intros: [
                         '个人博客全栈作品。遵循前端工程化和组件化思想,',
                         '使用Vue2+ES6+MuseUI编写前端代码，使用Sass+PostCSS编写页面样式,使用webpack编译打包，',
-                        '使用Express+MongoDB搭建后台服务，并独立完成linux环境的服务器部署，现已部署至腾讯云'
+                        '使用Express+MongoDB搭建后台服务，并独立完成linux环境的服务器部署'
                     ]
                 }, {
-                    name: 'waka-wechat-public',
-                    link: 'https://github.com/BadWaka/waka-wechat-public',
-                    intros: ['Koa搭建的微信公众号后台服务']
-                }, {
                     name: 'gallery-by-react-waka',
-                    link: 'https://github.com/BadWaka/gallery-by-react-waka',
+                    link: 'https://github.com/badwaka/gallery-by-react-waka',
                     intros: ['React+webpack实现的画廊程序']
                 }, {
                     name: 'lottery-by-vue',
-                    link: 'https://github.com/BadWaka/lottery-by-vue',
+                    link: 'https://github.com/badwaka/lottery-by-vue',
                     intros: ['Vue.js+Materialize实现的简单的抽奖程序']
                 }, {
                     name: 'WakaPedometer',
-                    link: 'https://github.com/BadWaka/WakaPedometer',
+                    link: 'https://github.com/badwaka/WakaPedometer',
                     intros: ['Android原生计步器程序，使用开源库Volley、fastjson']
                 }, {
                     name: 'SmallDianPing',
-                    link: 'https://github.com/BadWaka/SmallDianPing',
+                    link: 'https://github.com/badwaka/SmallDianPing',
                     intros: ['Android原生仿美团订餐程序，使用高德地图SDK']
                 }]
         }
