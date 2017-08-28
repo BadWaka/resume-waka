@@ -1,2 +1,2 @@
 # resume-waka
-简历
+个人简历
