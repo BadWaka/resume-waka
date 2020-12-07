@@ -25,11 +25,16 @@ a {
 }
 
 .sm-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     padding-top: 18px;
     padding-bottom: 8px;
     border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-size: 16px;
 }
 
 .base-info {
@@ -49,18 +54,21 @@ a {
 }
 
 .base-info-item {
-    padding-top: 8px;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 .skill-item, .intro-item {
     display: flex;
     align-items: center;
-    padding-top: 8px;
 }
 
 .skill-item {
+    margin-top: 5px;
     color: #03A9F4;
     font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 .skill .skill-item {
@@ -70,6 +78,8 @@ a {
 
 .intro-item {
     margin-left: 24px;
+    font-size: 12px;
+    line-height: 22px;
 }
 
 .point, .point-square {

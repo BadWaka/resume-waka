@@ -63,7 +63,7 @@
       v-for="(experience, experienceIndex) in experiences"
       :key="'experience' + experienceIndex"
     >
-      <div class="row">
+      <div style="margin-top: 10px" class="row">
         <div class="company-name">
           {{ experience.company }} | {{ experience.job }} |
           {{ experience.city }}
@@ -77,11 +77,8 @@
       >
         <div class="skill-item">
           <div class="point"></div>
-          {{ project.name }}&nbsp;&nbsp;<a
-            :href="project.link"
-            target="_blank"
-            >{{ project.link }}</a
-          >
+          <span style="margin-right: 10px">{{ project.name }}</span>
+          <a :href="project.link" target="_blank">{{ project.link }}</a>
         </div>
         <ul
           v-for="(intro, introIndex) in project.intros"
@@ -102,11 +99,8 @@
     >
       <div class="skill-item">
         <div class="point"></div>
-        {{ project.name }} &nbsp;&nbsp;<a
-          :href="project.link"
-          target="_blank"
-          >{{ project.link }}</a
-        >
+        <span style="margin-right: 10px">{{ project.name }}</span>
+        <a :href="project.link" target="_blank">{{ project.link }}</a>
       </div>
       <ul
         v-for="(intro, introIndex) in project.intros"
@@ -128,9 +122,10 @@ export default {
   data() {
     return {
       skills: [
-        "掌握 HTML、CSS、JS，熟悉 ES6，了解 TypeScript",
+        "掌握 HTML、CSS、JS，熟悉 ES6，熟练使用 TypeScript",
         "熟悉 Sass、Less，了解 Stylus、PostCSS",
-        "掌握 jQuery、React、Redux，熟悉微信小程序、Vue、AppCan.js(类 Ionic 的 Hybrid 框架)，了解 React Native",
+        "掌握 Vue、React、Redux，熟悉微信小程序、AppCan.js (类 Ionic 的 Hybrid 框架)，了解 React Native",
+        "熟练使用 Atom、San 等类 Vue 百度自研框架",
         "熟练使用 Webpack、Gulp；熟悉前端工程化和组件化开发思想",
         "有后端开发经历，熟练使用 Node、Express、Koa，了解 MySQL，MongoDB",
         "熟练使用 npm，了解 Yarn",
@@ -148,20 +143,49 @@ export default {
       ],
       experiences: [
         {
-          company: "百度在线网络技术(北京)有限公司",
-          job: "前端资深研发工程师，职级 T6",
+          company: "百度在线网络技术（北京）有限公司",
+          job: "前端资深研发工程师 | 职级 T6 | 2019 年度绩效 E",
           city: "北京",
           beginTime: "2017-09-13",
           endTime: "至今",
           contents: [],
           projects: [
             {
-              name: "负责搜索前端通用组件、样式的研发、维护和管理",
+              name: "搜索前端通用组件 Topic 技术负责人",
               intros: [
-                
-              ]
-            }
-          ]
+                "search-ui 通用组件库，影响 pv 125亿+，20+ 参与开发，影响公司自然模板、六合、视频、图搜、时效性、百科等 20+ 产品",
+                "lego && 无极项目搜索 C 端组件、卡片迁移负责人，影响 pv 2.2 亿+，74+ 参与开发，覆盖金融、音乐、服务、民生、家装等 20+ 垂类业务",
+                "pmd.css 搜索通用样式库、iconfont 搜索通用图标库负责人，影响整个百度搜索的展现",
+                "Mars UI 小程序组件库负责人，已接入汽车（度寻车）、招聘（百度百聘）、金融（百股精）、法律（豌豆律师）、医疗（医疗健康中心）、家装（装馨家） 6+ 小程序",
+              ],
+            },
+            {
+              name: "LEGO 搜索智能卡片机制",
+              intros: [
+                "实现通用卡片机制，具备可配置的能力，进一步降低视觉/交互的整体升级的成本",
+                "设计了组件的引入标准和流程，负责 lego C 端组件库的开发、迭代及维护",
+                "负责 lego 卡片的开发至上线全流程开发指导、文档编写、问题答疑及上线值周",
+                "负责 json mirror 文件编译器，拓展配置文件语法；及编译、上线优化等工程效率任务",
+                "负责开发 lego 卡片统计脚本及工具",
+              ],
+            },
+            {
+              name: "搜索全局样式迭代",
+              intros: [
+                "负责搜索全局样式 pmd.css、搜索通用图标库 iconfont 的开发迭代及维护",
+                "负责 NA 2.0 高级感项目、搜索 D20 样式改版项目、搜索暗黑模式、oppo 负一屏等重点项目的开发和上线",
+                "推动流程规范建设，推动 UE 对图标进行分类和去重，提高开发人员的效率，减少通用图标库的体积；获得 2019年 Q4 蓝军小赞荣誉",
+              ],
+            },
+            {
+              name: "商品、医疗、金融、旅游等搜索阿拉丁垂类",
+              intros: [
+                "负责垂类相关项目的需求评审、迭代及体验优化，不断满足新的业务方向上的产品需求",
+                "能够做出完整开发设计方案，对接PM、UE、RD推进项目落地，负责指导新人完成开发任务，解决问题",
+                "负责医疗专家问诊、肺炎疫情地图、商品熊掌号、百股精金融小程序等重点项目的开发维护任务",
+              ],
+            },
+          ],
         },
         {
           company: "北京云莱坞文化传媒有限公司",
@@ -181,24 +205,18 @@ export default {
               name: "云莱坞作家后台",
               link: "http://user.yunlaiwu.com/",
               intros: [
-                "该项目是云莱坞作家后台，主要功能有编辑个人信息、简历、作品，查看投稿、订单、关注等；",
                 "负责整个作家后台的功能开发及维护，负责 SPA 基础工程的搭建与优化；",
-                "前端页面使用 AntD + React + Redux + Immutable + ES6 进行开发；使用 webpack 进行构建打包；后端使用 Express + pm2 进行部署；",
                 "在 Node 层使用 ejs 渲染页面，进行接口转发解决上传文件跨域的问题",
                 "我在完善功能样式后重构整个项目：使用 AntD 替代 react-bootstrap 重写样式，编写特殊组件完成需求并抽象出公共 UI 库",
                 "升级 webpack 及去除无用依赖库，重新配置基础构建工程，使编译打包后的文件大小缩减至 30%；抽象出第三方依赖库作为 vendor 增强缓存策略",
-                "重写部分逻辑，聚合组件功能，并使用 webpack 分割打包代码，动态加载各个 chunk 包，以进行首页速度优化",
               ],
             },
             {
               name: "云莱坞官方网站",
               link: "http://www.yunlaiwu.com/",
               intros: [
-                "该项目是云莱坞官方网站，主要面向作家和制片人群体；",
                 "主要负责 PC 端登录注册、闪电征稿、个人主页等模块，H5 端版权交易周、投票运营页等前端页面，及 node 中间层的开发与维护；",
-                "前端页面使用 jQuery/Zepto + Less 进行开发；使用 Node + Express + ejs 作为中间层渲染页面和代理 php 端请求；使用 Gulp 构建打包；基于 LeanCloud 进行部署；",
                 "在详情页及列表页通过 Node 层 SSR 渲染首屏数据增强 SEO；使用百度统计、美洽等第三方工具统计流量和实现客服功能",
-                "使用 reset.css 统一样式；使用 store.js 统一本地储存；使用 CDN 加速图片及 CSS、JS 文件的加载",
                 "重构整个 Node 层代码，通过 UA 判断请求，手动代理移动端流量至另一机器集群进行流量压力分流；",
                 "独立使用 LeanCloudAPI、微信 API，不依赖后端，开发完整的投票功能（PC 结果页、微信端投票页）",
               ],
@@ -223,66 +241,47 @@ export default {
           ],
           projects: [
             {
-              name: "正益工作 Hybrid App（已上线）",
+              name: "正益工作 Hybrid App",
               link: "http://work.zyhao.com/",
               intros: [
-                "该项目是企业移动门户管理及移动办公的一体式企业级解决方案；",
                 "负责正益工作移动端App功能门户、IM会话、企业通讯录、考勤签到、工单任务报告等模块的功能开发及维护；",
-                "使用Zepto.js+Backbone.js+AppCan.js构建的Hybrid App，主要负责的前端页面功能、样式开发；",
                 "该项目门户模块源代码已被中国电建、上海卡斯柯、万科集团、福田汽车、奥凯航空等企业级用户所采用；",
                 "我在完善功能样式后使用Vue.js重构部分项目；使用Sass和flex布局重写UI，代码量减少20%",
               ],
             },
             {
-              name: "正益移动-微信小程序（已上线）",
+              name: "正益移动 - 微信小程序",
               intros: [
-                "该项目是公司内部打卡。订餐管理的微信小程序，主要功能有打卡、订餐、人员管理、订餐管理；",
                 "负责全部前端页面的设计、界面实现及功能实现；负责小程序的接入和上线发布；",
-                "使用微信小程序框架MINA，及微信官方样式库WeUI实现前端界面；",
-                "配合后端实现小程序登录流程，并完成前后端接口的联调对接工作。",
+                "使用微信小程序框架 MINA，及微信官方样式库 WeUI 实现前端界面；配合后端实现小程序登录流程，并完成前后端接口的联调对接工作。",
               ],
             },
             {
-              name: "福田汽车-移动门户（已上线）",
-              link: "https://mobin.foton.com.cn/app/",
-              intros: [
-                "该项目是福田汽车企业移动门户 Hybrid App；",
-                "负责文化活动、场馆预约、员工食堂、掌上班车、福田商城、考勤信息模块前端页面及功能的实现；",
-                "使用HTML、CSS实现静态页面，使用flex布局；使用Backbone.js+Epoxy.js实现数据视图绑定，后续用Vue重构；",
-                "使用AppCan.js连接Native层；使用jQuery操作DOM和进行网络请求。",
-              ],
-            },
-            {
-              name: "乌鲁木齐银行-雪莲伙伴（已上线）",
+              name: "乌鲁木齐银行-雪莲伙伴",
               link: "http://www.uccb.com.cn/phone.aspx",
               intros: [
-                "该项目是乌鲁木齐银行为Android系统POS机上定制的Hybrid App；",
-                "主要功能有pos的支付、预授权、电子现金等功能，燃气卡水卡电卡公交卡缴费；",
                 "负责AppCan框架前端性能优化及Android原生插件开发的技术支持；",
                 "因为同时懂得前端技术和Android原生技术，将原本需要两个人的任务一个人完成，并将工时缩短至一半；",
-                "可以接受远距离出差和高强度加班",
               ],
             },
             {
-              name: "中国电力建设集团-电建通（已上线）",
+              name: "中国电力建设集团-电建通",
               link: "http://pcm.powerchina.cn/",
               intros: [
-                "中国电力建设集团移动办公管理Hybrid App，主要功能有移动门户、IM聊天、Voip语音通话、通讯录管理等；",
-                "根据华为提供的eSpaceSDK，负责Android原生模块Voip语音通话的二次开发、封装和性能优化；",
-                "大量使用Broadcast广播接收器和Handler多线程编程，为JS端提供Voip语音通话功能；",
-                "开发期间由于文档、SDK设计问题，与华为技术人员进行大量邮件、电话沟通，将语音通话功能如期上线",
+                "根据华为提供的 eSpaceSDK，负责 Android 原生模块 Voip 语音通话的二次开发、封装和性能优化；",
+                "大量使用 Broadcast 广播接收器和 Handler 多线程编程，为 JS 端提供 Voip 语音通话功能；",
+                "开发期间由于文档、SDK 设计问题，与华为技术人员进行大量邮件、电话沟通，将语音通话功能如期上线",
               ],
             },
             {
-              name: "企业级项目Android插件开发",
+              name: "企业级项目 Android 插件开发",
               intros: [
-                "杭州指端项目 开发Android计步器模块，实现多传感器计步，数据库缓存数据及前台服务；",
-                "绫致服装项目 开发Android图片标签模块，实现给图片添加标签、编辑、移动的功能；",
-                "正益工作项目 开发Android照相机模块，实现自定义Android照相机；",
-                "协同开发项目 开发悬浮窗原生View，并实现上传崩溃日志和log功能；",
-                "百年人寿项目 根据mupdf，二次开发Android PDF解析器模块；",
-                "江苏烟草项目 开发Android NFC读取模块；",
-                "上海凯泉项目 负责百度地图、百度导航SDK的二次封装。",
+                "杭州指端项目 开发 Android 计步器模块，实现多传感器计步，数据库缓存数据及前台服务；",
+                "绫致服装项目 开发 Android 图片标签模块，实现给图片添加标签、编辑、移动的功能；",
+                "正益工作项目 开发 Android 照相机模块，实现自定义Android照相机；",
+                "协同开发项目 开发悬浮窗原生 View，并实现上传崩溃日志和 log 功能；",
+                "百年人寿项目 根据 mupdf，二次开发 Android PDF 解析器模块；",
+                "江苏烟草项目 开发 Android NFC 读取模块；",
               ],
             },
           ],
@@ -303,26 +302,22 @@ export default {
             //                            ]
             //                        },
             {
-              name: "旺铺帮掌柜宝（已上线）",
+              name: "旺铺帮掌柜宝",
               link: "http://www.wangpupos.com/serve/twodownload.html",
               intros: [
-                "该项目是面向餐厅管理人员的一款移动管理App",
-                "主要功能有店铺进销管理、营业流水管理、员工管理、财务管理、促销信息、会员管理；",
-                "负责该项目Android客户端，店铺进销管理、营业流水管理模块的开发及维护；",
-                "根据需求文档，使用Android各种布局实现页面，使用Handler和多线程技术请求网络并异步更新UI；",
-                "自定义View实现简单的条形图。",
+                "负责该项目 Android 客户端，店铺进销管理、营业流水管理模块的开发及维护；",
+                "根据需求文档，使用 Android 各种布局实现页面，使用 Handler 和多线程技术请求网络并异步更新 UI；",
+                "自定义 View 实现简单的条形图。",
               ],
             },
             {
-              name: "我们去哪儿（已上线）",
+              name: "我们去哪儿",
               link:
                 "http://sj.qq.com/myapp/detail.htm?apkName=com.travel.travel_app",
               intros: [
-                "该项目是一款旅行社交类App，为用户提供一个在线交流、线下出游的社交平台；",
-                "负责该项目的Android客户端功能开发及维护；",
-                "根据产品需求，使用android布局和各类控件实现各种复杂界面；",
-                "使用Handler和多线程请求网络并异步更新UI；",
-                "使用内置SQLite数据库存取数据；使用JUnit进行单元测试。",
+                "负责该项目的 Android 客户端功能开发及维护；",
+                "根据产品需求，使用 android 布局和各类控件实现各种复杂界面；",
+                "使用内置 SQLite 数据库存取数据；使用 JUnit 进行单元测试。",
               ],
             },
           ],
