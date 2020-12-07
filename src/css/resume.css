@@ -33,7 +33,7 @@ a {
     margin-bottom: 10px;
 }
 
-.company-name {
+.row, .company-name {
     font-size: 12px;
     line-height: 22px;
 }
