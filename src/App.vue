@@ -11,7 +11,7 @@
     <div class="base-info">
       <div class="base-info-left">
         <div class="base-info-item">姓名：王凯</div>
-        <div class="base-info-item">年龄：23</div>
+        <div class="base-info-item">年龄：27</div>
         <div class="base-info-item">电话：15652912603</div>
         <div class="base-info-item">学校：华北电力大学（北京）</div>
         <div class="base-info-item">
@@ -154,6 +154,14 @@ export default {
           beginTime: "2017-09-13",
           endTime: "至今",
           contents: [],
+          projects: [
+            {
+              name: "负责搜索前端通用组件、样式的研发、维护和管理",
+              intros: [
+                
+              ]
+            }
+          ]
         },
         {
           company: "北京云莱坞文化传媒有限公司",
