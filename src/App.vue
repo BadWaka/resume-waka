@@ -68,7 +68,7 @@
           {{ experience.company }} | {{ experience.job }} |
           {{ experience.city }}
         </div>
-        <div>{{ experience.beginTime }}-{{ experience.endTime }}</div>
+        <div>{{ experience.beginTime }} - {{ experience.endTime }}</div>
       </div>
 
       <div
