@@ -148,6 +148,14 @@ export default {
       ],
       experiences: [
         {
+          company: "百度在线网络技术(北京)有限公司",
+          job: "前端资深研发工程师，职级 T6",
+          city: "北京",
+          beginTime: "2017-09-13",
+          endTime: "至今",
+          contents: [],
+        },
+        {
           company: "北京云莱坞文化传媒有限公司",
           job: "前端开发工程师",
           city: "北京",
