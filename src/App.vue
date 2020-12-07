@@ -3,7 +3,7 @@
     <div class="title-row">
       <h1 style="font-size: 36px">王凯</h1>
       <div style="padding-left: 48px; font-size: 24px">
-        两年工作经验 | 本科 | 前端开发工程师
+        四年工作经验 | 本科 | 前端开发工程师
       </div>
     </div>
 
