@@ -13,7 +13,7 @@
         <div class="base-info-item">姓名：王凯</div>
         <div class="base-info-item">年龄：27</div>
         <div class="base-info-item">电话：15652912603</div>
-        <div class="base-info-item">学校：华北电力大学（北京）</div>
+        <div class="base-info-item">学校：华北电力大学（北京）2016 年 7 月毕业</div>
         <div class="base-info-item">
           个人博客：<a
             target="_blank"
@@ -287,8 +287,8 @@ export default {
           ],
         },
         {
-          company: "北京观天智创科技有限公司",
-          job: "Android开发工程师",
+          company: "【实习】北京观天智创科技有限公司",
+          job: "Android 开发工程师",
           city: "北京",
           beginTime: "2015.03",
           endTime: "2015.09",
